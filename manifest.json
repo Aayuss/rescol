@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ResCol",
+  "version": "1.0",
+  "description": "Collect and organize references (images and text) into nested folders via the context menu.",
+  "icons": {
+    "16": "rescol.png",
+    "32": "rescol.png",
+    "48": "rescol.png",
+    "128": "rescol.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open ResCol Dashboard",
+    "default_icon": "rescol.png"
+  }
+}

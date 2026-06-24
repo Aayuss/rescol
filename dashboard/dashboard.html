@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResCol Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-lockup"><div class="brand-mark" aria-hidden="true"></div><div><p>RESEARCH COLLECTION</p><h1>ResCol</h1></div></div>
+        <button id="add-root-folder-btn" class="btn primary-btn"><span>+</span> New collection</button>
+      </div>
+      <p class="sidebar-label">YOUR COLLECTIONS</p>
+      <div class="folder-tree" id="folder-tree">
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="main-header">
+        <div><p class="section-label">COLLECTION VIEW</p><h2 id="current-folder-title">Select a collection</h2></div>
+        <div class="header-actions">
+          <button id="add-subfolder-btn" class="btn secondary-btn hidden">Add section</button>
+          <button id="export-btn" class="btn success-btn hidden">Export collection</button>
+          <button id="delete-folder-btn" class="btn danger-btn hidden">Delete</button>
+        </div>
+      </header>
+      <section class="collection-summary">
+        <div><p class="section-label">CAPTURED MATERIAL</p><strong id="collection-count">Choose a collection</strong></div>
+        <p>Save images and text from any page with the right-click menu.</p>
+      </section>
+      <div class="items-grid" id="items-grid">
+        <div class="empty-state">
+          <p>Select a collection to view its contents.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="folder-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modal-title">New Folder</h3>
+      <input type="text" id="folder-name-input" placeholder="Folder Name">
+      <div class="modal-actions">
+        <button id="modal-cancel-btn" class="btn text-btn">Cancel</button>
+        <button id="modal-save-btn" class="btn primary-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/jszip.min.js"></script>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
